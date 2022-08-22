@@ -1,7 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { Layout } from "./components/Layout.jsx";
-import { Main } from "./pages/Mainpage";
-import {NotFoundpage} from './pages/NotFoundpage';
+import { Start } from "./pages/Startpage";
+import { NotFoundpage } from "./pages/NotFoundpage";
+import "./index.css";
 // <Route path="/posts" element={<Blogpage />} />
 
 export default function App() {
@@ -9,7 +10,7 @@ export default function App() {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Main />} />
+          <Route index element={<Start />} />
           <Route path="/*" element={<NotFoundpage />} />
         </Route>
       </Routes>
