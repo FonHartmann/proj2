@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
 export const Start = () => {
-
-
-
   return (
     <>
       <div className="form__style">
+        <h1>Войти</h1>
         <Box
           component="form"
           sx={{
@@ -32,6 +30,10 @@ export const Start = () => {
             <Button variant="contained" size="medium">
               Войти
             </Button>
+            <div style={{ textAlign:"center" }}>  
+              <span>У вас нет аккаунта?<br></br><a href="/login">Зарегеструроватся</a></span>
+              
+            </div>
           </div>
         </Box>
       </div>
