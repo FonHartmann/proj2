@@ -6,9 +6,9 @@ import Button from "@mui/material/Button";
 export const Start = () => {
   return (
     <>
+    <div><h1 style={{ textAlign:"center" }}>Войти</h1></div>
       <div className="form__style">
-        <h1>Войти</h1>
-        <Box
+                <Box
           component="form"
           sx={{
             "& > :not(style)": { m: 1, width: "25ch" },
