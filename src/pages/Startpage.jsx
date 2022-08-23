@@ -5,6 +5,13 @@ import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 // import Backdrop from "@mui/material/Backdrop";
 // import CircularProgress from "@mui/material/CircularProgress";
+import InputLabel from "@mui/material/InputLabel";
+import InputAdornment from "@mui/material/InputAdornment";
+import Input from "@mui/material/Input";
+import IconButton from "@mui/material/IconButton";
+import FormControl from "@mui/material/FormControl";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
 export const Start = () => {
   // const [open, setOpen] = React.useState(false);
@@ -14,6 +21,26 @@ export const Start = () => {
   // const handleToggle = () => {
   //   setOpen(!open);
   // };
+  const [values, setValues] = React.useState({
+    password: "",
+    showPassword: false,
+  });
+
+  const handleChange = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+
+  const handleClickShowPassword = () => {
+    setValues({
+      ...values,
+      showPassword: !values.showPassword,
+    });
+  };
+
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <>
       <div>
@@ -29,18 +56,39 @@ export const Start = () => {
           autoComplete="off"
         >
           <div>
-            <TextField id="standard-basic" label="Email" variant="standard" />
-          </div>
-          <div>
             <TextField
+              helperText="Please enter your Email or Login"
               id="standard-basic"
-              label="Password"
-              type="password"
+              label="Email"
               variant="standard"
             />
           </div>
+          <div>
+            <FormControl variant="standard">
+              <InputLabel htmlFor="standard-adornment-password">
+                Password
+              </InputLabel>
+              <Input
+                id="standard-adornment-password"
+                type={values.showPassword ? "text" : "password"}
+                value={values.password}
+                onChange={handleChange("password")}
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={handleClickShowPassword}
+                      onMouseDown={handleMouseDownPassword}
+                    >
+                      {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                    </IconButton>
+                  </InputAdornment>
+                }
+              />
+            </FormControl>
+          </div>
           <div className="m_l_button">
-            <Button
+            <Button sx={{ mt: 2}}
               // onClick={handleToggle}
               component={Link}
               to="/main"
