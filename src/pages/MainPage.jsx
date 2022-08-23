@@ -4,5 +4,6 @@ export const Main = () => {
     <div>
       <Table />
     </div>
+    
   );
 };
