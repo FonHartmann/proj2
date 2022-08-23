@@ -9,8 +9,7 @@ export const Table = () => {
             </td>
             <td colSpan="24" width="956">
               <h1>
-                <a></a>
-                <span>ИОТ №</span>
+               <span>ИОТ №</span>
                 <span>&nbsp;&nbsp;&nbsp;&nbsp; </span>
                 <span></span>
               </h1>
