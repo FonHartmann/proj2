@@ -1,14 +1,15 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-import InputLabel from "@mui/material/InputLabel";
-import InputAdornment from "@mui/material/InputAdornment";
-import Input from "@mui/material/Input";
-import IconButton from "@mui/material/IconButton";
-import FormControl from "@mui/material/FormControl";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import {
+  Box,
+  TextField,
+  Button,
+  InputLabel,
+  InputAdornment,
+  Input,
+  IconButton,
+  FormControl,
+} from "@mui/material";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 export const LoginPage = () => {
   const [values, setValues] = React.useState({
