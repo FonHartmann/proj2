@@ -9,13 +9,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100%;
-  min-height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.outlet {
+  min-height: calc(90vmin - 70px);
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
 }
 .header__style {
   display: flex;
@@ -31,13 +36,12 @@ code {
   justify-content: center;
 }
 footer {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: flex-end;
-  padding: 5px;
+  align-items: flex-end; */
+  text-align: center;
 }
-.m_l_button{
+.m_l_button {
   display: flex;
   flex-direction: column;
-  
 }
