@@ -15,6 +15,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+table{
+  text-indent: initial;
+  white-space: normal;
+  line-height: normal;
+  font-weight: normal;
+}
+.tab__wrapper{
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+tr{
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+
+
+
+
+
 .outlet {
   min-height: calc(90vmin - 70px);
 }
